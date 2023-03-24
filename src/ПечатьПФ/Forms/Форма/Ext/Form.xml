@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="Дата" id="18">
+					<DataPath>Объект.Дата</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="20"/>
+				</InputField>
+				<InputField name="Маршрут" id="21">
+					<DataPath>Объект.Маршрут</DataPath>
+					<ContextMenu name="МаршрутКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="МаршрутРасширеннаяПодсказка" id="23"/>
+					<Events>
+						<Event name="OnChange">МаршрутПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Подвал" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодвалРасширеннаяПодсказка" id="4"/>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="78">
+			<HorizontalStretch>false</HorizontalStretch>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<Button name="Сформировать" id="46">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Сформировать</CommandName>
+					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="47"/>
+				</Button>
+				<Button name="Распечатать" id="76">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Распечатать</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать Этикеток</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="РаспечататьРасширеннаяПодсказка" id="77"/>
+				</Button>
+				<Button name="ПечатьОтчета" id="84">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПечатьОтчета</CommandName>
+					<ExtendedTooltip name="ПечатьОтчетаРасширеннаяПодсказка" id="85"/>
+				</Button>
+				<UsualGroup name="Группа2" id="86">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<Button name="ПолучитьИзВХ" id="90">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ПолучитьИзВХ</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.AppearanceUpArrowGreen</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Shape>Oval</Shape>
+							<ExtendedTooltip name="ПолучитьИзВХРасширеннаяПодсказка" id="91"/>
+						</Button>
+						<Button name="ОчиститьВХ" id="92">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ОчиститьВХ</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.AppearanceCross</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Shape>Oval</Shape>
+							<ExtendedTooltip name="ОчиститьВХРасширеннаяПодсказка" id="93"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Клиенты" id="48">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Клиенты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КлиентыКонтекстноеМеню" id="49"/>
+			<AutoCommandBar name="КлиентыКоманднаяПанель" id="50">
+				<ChildItems>
+					<Button name="КлиентыВыделитьВсе" id="80">
+						<Type>CommandBarButton</Type>
+						<Representation>Picture</Representation>
+						<CommandName>Form.Command.ВыделитьВсе</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.CheckAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="КлиентыВыделитьВсеРасширеннаяПодсказка" id="81"/>
+					</Button>
+					<Button name="КлиентыСнятьВыделение" id="82">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СнятьВыделение</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.GrayedAll</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="КлиентыСнятьВыделениеРасширеннаяПодсказка" id="83"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="КлиентыРасширеннаяПодсказка" id="51"/>
+			<SearchStringAddition name="КлиентыСтрокаПоиска" id="52">
+				<AdditionSource>
+					<Item>Клиенты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КлиентыСтрокаПоискаКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="КлиентыСтрокаПоискаРасширеннаяПодсказка" id="54"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КлиентыСостояниеПросмотра" id="55">
+				<AdditionSource>
+					<Item>Клиенты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КлиентыСостояниеПросмотраКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="КлиентыСостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КлиентыУправлениеПоиском" id="58">
+				<AdditionSource>
+					<Item>Клиенты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КлиентыУправлениеПоискомКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="КлиентыУправлениеПоискомРасширеннаяПодсказка" id="60"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="КлиентыНомерСтроки" id="61">
+					<DataPath>Объект.Клиенты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыНомерСтрокиКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="КлиентыНомерСтрокиРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<CheckBoxField name="КлиентыРаспечатать" id="73">
+					<DataPath>Объект.Клиенты.Распечатать</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="КлиентыРаспечататьКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="КлиентыРаспечататьРасширеннаяПодсказка" id="75"/>
+				</CheckBoxField>
+				<InputField name="КлиентыКонтрагент" id="64">
+					<DataPath>Объект.Клиенты.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыКонтрагентКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="КлиентыКонтрагентРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="КлиентыВес" id="67">
+					<DataPath>Объект.Клиенты.Вес</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыВесКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="КлиентыВесРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="КлиентыКоличество" id="70">
+					<DataPath>Объект.Клиенты.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КлиентыКоличествоКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="КлиентыКоличествоРасширеннаяПодсказка" id="72"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ПечатьПФ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Объект.Маршрут</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сформировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+		<Command name="Распечатать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Распечатать</Action>
+		</Command>
+		<Command name="ВыделитьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыделитьВсе</Action>
+		</Command>
+		<Command name="СнятьВыделение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять выделение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять выделение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьВыделение</Action>
+		</Command>
+		<Command name="ПечатьОтчета" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать отчета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать отчета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатьОтчета</Action>
+		</Command>
+		<Command name="ПолучитьИзВХ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить из ВХ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить из ВХ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьИзВХ</Action>
+		</Command>
+		<Command name="ОчиститьВХ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить ВХ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить ВХ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьВХ</Action>
+		</Command>
+	</Commands>
+</Form>
