@@ -85,37 +85,6 @@
 					<CommandName>Form.Command.ПечатьОтчета</CommandName>
 					<ExtendedTooltip name="ПечатьОтчетаРасширеннаяПодсказка" id="85"/>
 				</Button>
-				<UsualGroup name="Группа2" id="86">
-					<HorizontalStretch>false</HorizontalStretch>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="87"/>
-					<ChildItems>
-						<Button name="ПолучитьИзВХ" id="90">
-							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<CommandName>Form.Command.ПолучитьИзВХ</CommandName>
-							<Picture>
-								<xr:Ref>StdPicture.AppearanceUpArrowGreen</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Shape>Oval</Shape>
-							<ExtendedTooltip name="ПолучитьИзВХРасширеннаяПодсказка" id="91"/>
-						</Button>
-						<Button name="ОчиститьВХ" id="92">
-							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<CommandName>Form.Command.ОчиститьВХ</CommandName>
-							<Picture>
-								<xr:Ref>StdPicture.AppearanceCross</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Shape>Oval</Shape>
-							<ExtendedTooltip name="ОчиститьВХРасширеннаяПодсказка" id="93"/>
-						</Button>
-					</ChildItems>
-				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<Table name="Клиенты" id="48">
@@ -146,6 +115,40 @@
 						</Picture>
 						<ExtendedTooltip name="КлиентыСнятьВыделениеРасширеннаяПодсказка" id="83"/>
 					</Button>
+					<Popup name="Группа2" id="86">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дополнительно</v8:content>
+							</v8:item>
+						</Title>
+						<HorizontalStretch>false</HorizontalStretch>
+						<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="87"/>
+						<ChildItems>
+							<Button name="ПолучитьИзВХ" id="90">
+								<Type>CommandBarButton</Type>
+								<Representation>Text</Representation>
+								<CommandName>Form.Command.ПолучитьИзВХ</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.AppearanceUpArrowGreen</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Shape>Oval</Shape>
+								<ExtendedTooltip name="ПолучитьИзВХРасширеннаяПодсказка" id="91"/>
+							</Button>
+							<Button name="ОчиститьВХ" id="92">
+								<Type>CommandBarButton</Type>
+								<Representation>Text</Representation>
+								<CommandName>Form.Command.ОчиститьВХ</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.AppearanceCross</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Shape>Oval</Shape>
+								<ExtendedTooltip name="ОчиститьВХРасширеннаяПодсказка" id="93"/>
+							</Button>
+						</ChildItems>
+					</Popup>
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="КлиентыРасширеннаяПодсказка" id="51"/>
