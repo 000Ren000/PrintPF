@@ -734,6 +734,7 @@
 		<rightBorder>0</rightBorder>
 		<bottomBorder>0</bottomBorder>
 		<width>95</width>
+		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
