@@ -176,6 +176,9 @@
 				<ContextMenu name="КлиентыУправлениеПоискомКонтекстноеМеню" id="59"/>
 				<ExtendedTooltip name="КлиентыУправлениеПоискомРасширеннаяПодсказка" id="60"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">КлиентыВыбор</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="КлиентыНомерСтроки" id="61">
 					<DataPath>Объект.Клиенты.LineNumber</DataPath>
@@ -190,12 +193,14 @@
 					<ContextMenu name="КлиентыРаспечататьКонтекстноеМеню" id="74"/>
 					<ExtendedTooltip name="КлиентыРаспечататьРасширеннаяПодсказка" id="75"/>
 				</CheckBoxField>
-				<InputField name="КлиентыКонтрагент" id="64">
+				<LabelField name="КлиентыКонтрагент" id="64">
 					<DataPath>Объект.Клиенты.Контрагент</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<CellHyperlink>true</CellHyperlink>
+					<Hiperlink>true</Hiperlink>
 					<ContextMenu name="КлиентыКонтрагентКонтекстноеМеню" id="65"/>
 					<ExtendedTooltip name="КлиентыКонтрагентРасширеннаяПодсказка" id="66"/>
-				</InputField>
+				</LabelField>
 				<InputField name="КлиентыВес" id="67">
 					<DataPath>Объект.Клиенты.Вес</DataPath>
 					<EditMode>EnterOnInput</EditMode>
