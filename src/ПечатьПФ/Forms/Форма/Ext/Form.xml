@@ -193,13 +193,13 @@
 					<ContextMenu name="КлиентыРаспечататьКонтекстноеМеню" id="74"/>
 					<ExtendedTooltip name="КлиентыРаспечататьРасширеннаяПодсказка" id="75"/>
 				</CheckBoxField>
-				<LabelField name="КлиентыКонтрагент" id="64">
-					<DataPath>Объект.Клиенты.Контрагент</DataPath>
+				<LabelField name="КлиентыПредставление" id="94">
+					<DataPath>Объект.Клиенты.Представление</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<CellHyperlink>true</CellHyperlink>
 					<Hiperlink>true</Hiperlink>
-					<ContextMenu name="КлиентыКонтрагентКонтекстноеМеню" id="65"/>
-					<ExtendedTooltip name="КлиентыКонтрагентРасширеннаяПодсказка" id="66"/>
+					<ContextMenu name="КлиентыПредставлениеКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="КлиентыПредставлениеРасширеннаяПодсказка" id="96"/>
 				</LabelField>
 				<InputField name="КлиентыВес" id="67">
 					<DataPath>Объект.Клиенты.Вес</DataPath>
